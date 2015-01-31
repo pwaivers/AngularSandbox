@@ -14,7 +14,7 @@ Then, install the bower packages
 > bower install
 ```
 
-Lastly, run `grunt``
+Lastly, run `grunt`
 ```
 > grunt
 ```
