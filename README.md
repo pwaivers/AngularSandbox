@@ -2,7 +2,7 @@
 AngularJS Sandbox and Seed Application
 
 ## Setup
-You should already have `node` and `bower` installed.  If not, please install them.
+You should already have `node` and `bower` installed.
 
 First, install the node packages
 ```
@@ -14,7 +14,7 @@ Then, install the bower packages
 > bower install
 ```
 
-Lastly, run **grunt**
+Lastly, run `grunt``
 ```
 > grunt
 ```
