@@ -1,0 +1,24 @@
+{
+  "name": "My Angular Sandbox",
+  "version": "0.1.0",
+  "authors": [
+    "Patrick Waivers <pwaivers@gmail.com>"
+  ],
+  "description": "My Angular Sandbox, Seed Project, and Example Project",
+  "main": "app/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.11",
+    "bootstrap": "~3.3.2",
+    "lodash": "~3.0.1"
+  }
+}

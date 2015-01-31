@@ -1,0 +1,4 @@
+{
+  "predef": [ "module", "require", "angular" ],
+  "globalstrict": true
+}
