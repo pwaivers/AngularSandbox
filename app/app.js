@@ -1,15 +1,7 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name yoAngularSandboxApp
- * @description
- * # yoAngularSandboxApp
- *
- * Main module of the application.
- */
 angular
-  .module('yoAngularSandboxApp', [])
+  .module('angularSandboxApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

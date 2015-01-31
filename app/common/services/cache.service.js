@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yoAngularSandboxApp')
+angular.module('angularSandboxApp')
   .factory('cache', function () {
 
     // Public API here

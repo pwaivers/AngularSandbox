@@ -1,13 +1,6 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name yoAngularSandboxApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the yoAngularSandboxApp
- */
-angular.module('yoAngularSandboxApp')
+angular.module('angularSandboxApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
