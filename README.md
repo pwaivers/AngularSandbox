@@ -27,4 +27,5 @@ Lastly, run `grunt`
 ## To Be Added
 * Test - Karma and Jasmine stack
 * LiveReload for grunt
+* Routing with UI-Router
 * Many more directives, services, and fun
