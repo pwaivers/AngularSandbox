@@ -1,0 +1,15 @@
+<div class="container">
+	<h1>{{projectsCtrl.title}}</h1>
+	<div class="selection-nav">
+		<ul>
+			<li ng-repeat="project in projectsCtrl.projects">
+				<a ui-sref="projects.editor({id: project.id})">{{project.name}}</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="selection-viewer">
+		<div ui-view></div>
+	</div>
+
+</div>

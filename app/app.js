@@ -1,22 +1,27 @@
 'use strict';
 
 angular
-  .module('angularSandboxApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/sandbox', {
-        templateUrl: 'views/sandbox.html',
-        controller: 'SandboxCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .module('angularSandboxApp', ['ui.router', 'ngLodash', 'formly'])
+  .config(function ($stateProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise("/home");
+	
+		$stateProvider
+		.state('home', {
+			url: '/home',
+			templateUrl: 'home/home.html'
+		})
+		.state('about', {
+			url: '/about',
+			templateUrl: 'about/about.html'
+		})
+		.state('projects', {
+			url: '/projects',
+			templateUrl: 'projects/projects.html',
+			controller: 'projectsController as projectsCtrl'
+		})
+		.state('projects.editor', {
+			url: '/{id}',
+			templateUrl: 'projects/project.editor.html',
+			controller: 'projectEditorController as vm'
+		});
   });
