@@ -25,8 +25,8 @@ module.exports = function(grunt) {
       files: allSrc,
       tasks: ['jshint'],
       options: {
-        livereload: true,
-      },
+          livereload: true
+      }
     },
 
     uglify: {
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
     wiredep: {
       task: {
         src: [
-          'app/index.tpl.html',
+          'app/index.tpl.html'
         ]
       }
     },
@@ -57,7 +57,8 @@ module.exports = function(grunt) {
     includeSource: {
       options: {
         basePath: 'app',
-        baseUrl: ''
+        baseUrl: '',
+        ordering: 'top-down'
       },
       myTarget: {
         files: {
