@@ -23,9 +23,8 @@ Lastly, run `grunt`
 * AngularJS
 * Bootstrap
 * Grunt
+* Forms and validation
+* UI-Routing with sub-routes
 
 ## To Be Added
-* Test - Karma and Jasmine stack
-* LiveReload for grunt
-* Routing with UI-Router
-* Many more directives, services, and fun
+* Unit Testing - Karma and Jasmine stack
