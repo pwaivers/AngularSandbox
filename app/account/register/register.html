@@ -1,7 +1,65 @@
 <div id="register-view">
-    <form name="myForm" novalidate="">
-        <input name="myEmail" type="email">
-        <p ng-if="myForm.$error.email">Email address is not valid!</p>
+    <h3>Register New Account</h3>
+    <form name="form" class="form-horizontal css-form" novalidate>
+
+        <div class="form-group">
+            <label for="userNameId" class="col-sm-2 control-label">User Name</label>
+            <div class="col-sm-5">
+                <input name="userNameId" id="userNameId"
+                       type="text" class="form-control" ng-model="registerCtrl.userName"
+                       ng-minlength="8" required username-taken>
+                <br />
+            </div>
+            <div class="col-sm-5">
+                <div ng-show="form.$submitted || form.userNameId.$touched">
+                    <div ng-messages="form.userNameId.$error">
+                        <p ng-message="required"> Please enter a username</p>
+                        <p ng-message="minlength">Username must be at least 8 characters</p>
+                        <p ng-message="usernameTaken">That username is taken</p>
+                    </div>
+                    <p ng-show="form.userNameId.$pending.usernameTaken">Searching for username...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="emailAddressId" class="col-sm-2 control-label">Email Address</label>
+            <div class="col-sm-5">
+                <input id="emailAddressId" name="emailAddressId"
+                       type="email" class="form-control" ng-model="registerCtrl.emailAddress" required>
+            </div>
+            <div class="col-sm-5">
+                <div ng-show="form.$submitted || form.emailAddressId.$touched">
+                    <p ng-show="form.emailAddressId.$error.required">*Please enter an email address</p>
+                    <p ng-show="form.emailAddressId.$error.email">Email is incorrect</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="passwordId1" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input id="passwordId1" name="passwordId1" type="password" ng-model="registerCtrl.password1">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="passwordId2" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-5">
+                <input id="passwordId2" name="passwordId2" type="password" ng-model="registerCtrl.password2">
+            </div>
+            <div class="col-sm-5">
+                <div ng-show="form.$submitted || form.passwordId2.$touched">
+                    <p ng-show="registerCtrl.password1 !== registerCtrl.password2">Passwords need to be the same</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
     </form>
 
 </div>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-    .module('angularSandboxApp', ['ui.router', 'ngLodash', 'formly'])
+    .module('angularSandboxApp', ['ui.router', 'ngLodash', 'ngMessages'])
     .config(function ($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/home");
 	
